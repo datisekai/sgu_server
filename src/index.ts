@@ -62,6 +62,8 @@ app.get("/v1", async (req, res) => {
   return res.json({ hoc_ki, thong_tin });
 });
 
-app.listen(8007, () => {
-  console.log("Server running....");
+const PORT = process.env.PORT || 8007;
+
+app.listen(PORT, () => {
+  console.log("Server running...." + PORT);
 });
